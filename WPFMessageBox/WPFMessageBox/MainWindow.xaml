@@ -20,7 +20,7 @@
             <RowDefinition/>
             <RowDefinition Height="45"/>
         </Grid.RowDefinitions>
-        <Rectangle Stroke="#B2000000" RadiusX="5" RadiusY="5" Grid.RowSpan="6" Fill="#FFFF8D8D" Grid.ColumnSpan="3"/>
+        <Rectangle x:Name="rect" Stroke="#B2000000" RadiusX="5" RadiusY="5" Grid.RowSpan="6" Fill="#FFFF8D8D" Grid.ColumnSpan="3"/>
         <Border x:Name="borderTitle" BorderBrush="#4C000000" BorderThickness="0,0,0,1" Grid.RowSpan="2" CornerRadius="5,5,0,0" Background="#33FFFFFF" MouseLeftButtonDown="txtTitle_MouseLeftButtonDown" Grid.ColumnSpan="3" Margin="0,0,0,0.2">
             <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Message Box" Padding="10,0" FontWeight="Bold" FontFamily="Tahoma" VerticalAlignment="Center" MouseLeftButtonDown="txtTitle_MouseLeftButtonDown"/>
         </Border>
@@ -29,6 +29,9 @@
         <Button x:Name="btn1" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="0,0.8,0.4,0" Grid.Row="5" Height="30" Click="btn1_Click"/>
         <Button x:Name="btn2" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="0,0.8,85.4,0" Grid.Row="5" Height="30" Click="btn2_Click"/>
         <Button x:Name="btn3" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="0,0.8,170.4,0" Grid.Row="5" Height="30"/>
+        <Border x:Name="borderClose" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="70" Grid.RowSpan="2" VerticalAlignment="Top" Width="70" Margin="0,-36,-35,0" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="35" Background="#99FFFFFF">
+            <Label x:Name="lblClose" Content="X" Foreground="Red" Padding="17,41,5,5"/>
+        </Border>
 
     </Grid>
 </Window>
