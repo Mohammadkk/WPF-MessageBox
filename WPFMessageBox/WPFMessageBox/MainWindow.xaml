@@ -8,7 +8,8 @@
         Title="MainWindow" Height="200" Width="400" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" MinWidth="73.6"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
@@ -20,17 +21,17 @@
             <RowDefinition/>
             <RowDefinition Height="45"/>
         </Grid.RowDefinitions>
-        <Rectangle x:Name="rect" Stroke="#B2000000" RadiusX="5" RadiusY="5" Grid.RowSpan="6" Fill="#FFFF8D8D" Grid.ColumnSpan="3"/>
-        <Border x:Name="borderTitle" BorderBrush="#4C000000" BorderThickness="0,0,0,1" Grid.RowSpan="2" CornerRadius="5,5,0,0" Background="#33FFFFFF" MouseLeftButtonDown="txtTitle_MouseLeftButtonDown" Grid.ColumnSpan="3" Margin="0,0,0,0.2">
-            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Text="Message Box" Padding="10,0" FontWeight="Bold" FontFamily="Tahoma" VerticalAlignment="Center" MouseLeftButtonDown="txtTitle_MouseLeftButtonDown"/>
+        <Rectangle x:Name="rect" Stroke="#B2000000" RadiusX="5" RadiusY="5" Grid.RowSpan="6" Fill="#FFFF8D8D" Grid.ColumnSpan="4"/>
+        <Border x:Name="borderTitle" BorderBrush="#4C000000" BorderThickness="0,0,0,1" Grid.RowSpan="2" CornerRadius="5,5,0,0" Background="#33FFFFFF" MouseLeftButtonDown="txtTitle_MouseLeftButtonDown" Grid.ColumnSpan="4" Margin="0,0,0,0.2">
+            <TextBlock x:Name="txtTitle" TextWrapping="Wrap" Padding="10,0" FontWeight="Bold" FontFamily="Tahoma" VerticalAlignment="Center" MouseLeftButtonDown="txtTitle_MouseLeftButtonDown"/>
         </Border>
-        <Image x:Name="image" Height="64" Margin="10,0,0,0" Grid.Row="3" MaxWidth="64" Source="images/Information 2.png" VerticalAlignment="Top"/>
-        <TextBlock x:Name="txtMessage" Grid.Column="1" Margin="0" Grid.Row="3" TextWrapping="Wrap" Padding="5,10,0,0" SizeChanged="txtMessage_SizeChanged" MinHeight="100" TextAlignment="Justify" LineHeight="20"/>
-        <Button x:Name="btn1" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="0,0.8,0.4,0" Grid.Row="5" Height="30" Click="btn1_Click"/>
-        <Button x:Name="btn2" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="0,0.8,85.4,0" Grid.Row="5" Height="30" Click="btn2_Click"/>
-        <Button x:Name="btn3" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="0,0.8,170.4,0" Grid.Row="5" Height="30"/>
-        <Border x:Name="borderClose" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="70" Grid.RowSpan="2" VerticalAlignment="Top" Width="70" Margin="0,-36,-35,0" Grid.Column="1" Grid.ColumnSpan="2" CornerRadius="35" Background="#99FFFFFF">
-            <Label x:Name="lblClose" Content="X" Foreground="Red" Padding="17,41,5,5"/>
+        <Image x:Name="image" Margin="0" Grid.Row="3" MaxWidth="64" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="txtMessage" Grid.Column="2" Margin="0.4,0.2,0.4,10.2" Grid.Row="3" TextWrapping="Wrap" Padding="5,10,0,0" SizeChanged="txtMessage_SizeChanged" MinHeight="100" TextAlignment="Justify" LineHeight="20" Grid.RowSpan="2"/>
+        <Button x:Name="btn1" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Grid.Column="2" Margin="0,0.8,0.4,0" Grid.Row="5" Height="30"/>
+        <Button x:Name="btn2" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Grid.Column="2" Margin="0,0.8,85.4,0" Grid.Row="5" Height="30" Visibility="Hidden"/>
+        <Button x:Name="btn3" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Grid.Column="2" Margin="0,0.8,170.4,0" Grid.Row="5" Height="30" Visibility="Hidden"/>
+        <Border x:Name="btnClose" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Height="70" Grid.RowSpan="2" VerticalAlignment="Top" Width="70" Margin="0,-36,-35,0" Grid.Column="2" Grid.ColumnSpan="2" CornerRadius="35" Background="#99FFFFFF">
+            <Label x:Name="lblClose" Content="X" Foreground="Red" Padding="17,41,5,5" Background="{x:Null}"/>
         </Border>
 
     </Grid>

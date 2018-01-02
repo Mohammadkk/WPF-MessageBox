@@ -18,7 +18,7 @@ namespace WPFMessageBox
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    partial class MainWindow : Window
     {
         public MainWindow()
         {
@@ -34,20 +34,7 @@ namespace WPFMessageBox
 
         private void txtMessage_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-
             window.Height = e.NewSize.Height - 100 + 200;
-        }
-
-        private void btn1_Click(object sender, RoutedEventArgs e)
-        {
-            txtMessage.Text = @"TextBl";
-        }
-
-        private void btn2_Click(object sender, RoutedEventArgs e)
-        {
-            txtMessage.Text += @"For 30 minutes on Sunday the biggest debate in football had nothing to do with, well, football.
-Unsurprisingly, the incident comes from Buffalo and goes beyond the game, deep into the psychology of the modern athlete. Not much else mattered until there was an answer to this.
-Is Bills kicker Steven Hauschka peeing on the field here? Or is he squirting a frozen water bottle?";
         }
     }
 }
